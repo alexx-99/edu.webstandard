@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('#web').html('웹 프로그래밍'); // text('웹 프로그래밍');
+            // 제이쿼리 이벤트(사용자의 행위) 처리
+            // 1. 이벤트 대상을 선택 : $('CSS 선택자')
+            // 2. 이벤트 연결(등록) 메소드 : 이벤트 대상에 어떤 이벤트(클릭, 마우스오버, 드래그앤드랍 등)를 등록할 지 여부를 결정
+            // 2. 이벤트 효과 메소드 : 문서를 조작하는 메소드(show(),hide(),toggle(),fadeIn(),fadeOut(),fadeToggle(),slideDown(),slideUp(),slideToggle())
+            $('#hideBtn').click(function(){
+                $('#web').fadeOut();
+            });
+            $('#showBtn').click(function(){
+                $('#web').fadeIn();
+            });
+            // mouseover(), mouseout()
+            $('#web').mouseenter(function(){
+                $(this).addClass('active');
+                // $(this)는 이벤트가 발생한 이벤트 대상을 선택한다.
+                // addClass()는 선택한 요소에 클래스명을 추가한다.
+            });
+            $('#web').mouseleave(function(){
+                $(this).removeClass('active');
+                // remvoeClass()는 선택한 요소에 클래스명을 제거한다.
+            });
+
+
+            // $('#add').click(function(){
+            //     $('.blue').addClass('box');
+            // });
+            // $('#remove').click(function(){
+            //     $('.blue').removeClass('box');
+            // });
+            $('#add').click(function(){
+                $('.blue').toggleClass('box');
+                // box 클래스명이 있으면 제거하고 없으면 추가한다.
+            });
+
+            var width = 100;
+            $('.area').click(function(){
+                $(this).width(width+=30);
+                // #area 박스(5개) 중 이벤트가 발생한 박스(1개)를 this로 선택한다.
+            });
+
+        });
+    </script>
+    <style>
+        .wrap {margin:100px 0;}
+
+        #web {width:300px; height:100px; background:lightblue;}
+        #web.active {width:800px; height:400px; background:#fc0;}
+
+        .wrap span {margin:0 20px;}
+        .wrap span:nth-child(1) {margin-left:0;}
+
+        .box {color:#06f;}
+
+
+        .area {width:100px; height:100px; margin:10px 0; background:#fc0;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <p id="web"></p>
+        <button id="hideBtn" class="btn btn-danger">hide</button>
+        <button id="showBtn" class="btn btn-info">show</button>
+    </div>
+
+    <div class="wrap blue">
+        <h3>WEB STANDARD PROGRAMMING</h3>
+        <p><span>HTML5</span>/<span>CSS3</span>/<span>JavaScript and jQuery</span></p>
+        <!-- <button id="add" class="btn btn-primary">적용</button>
+        <button id="remove" class="btn btn-danger">적용해제</button> -->
+        <button id="add" class="btn btn-primary">적용스위치</button>
+    </div>
+
+    <div class="wrap">
+        <div class="area">BOX1</div>
+        <div class="area">BOX2</div>
+        <div class="area">BOX3</div>
+        <div class="area">BOX4</div>
+        <div class="area">BOX5</div>
+    </div>
+</body>
+</html>

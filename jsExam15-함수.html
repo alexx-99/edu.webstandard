@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <script>
+        // 함수 선언 : ①함수명을 결정, ②매개변수 리스트에서 데이터를 전달받을지 여부, ③결괏값 반환여부
+        function multiplication(num1, num2) {
+            var result = num1 * num2;
+            return result; // multiplication 함수를 호출한 곳으로 값을 반환한다.
+        }
+
+        var value = multiplication(5, 6); // multiplication 함수를 호출하면서 두 수를 곱하는 기능을 사용한다.
+        document.write(value, '<br>');
+
+
+        var text1 = '함수 선언 전 호출';
+        var text2 = '함수 선언 후 호출';
+
+        printMsg(text1);
+
+        function printMsg(msg) {
+            document.write(msg, '<br>');
+        }
+
+        printMsg(text2);
+
+
+        function printInfo(name, age) {
+            document.write('<p>이름은 '+name+'이고 나이는 '+age+'살 이다.</p>');
+        }
+
+        printInfo('을지문덕', 33);
+
+        var printInfo = function(name, age) {
+            document.write('<p>이름은 '+name+'이고 나이는 '+age+'살 이다.</p>');
+        }
+
+
+        function getTotal(num) { // 1부터 전달받은 값까지의 총합을 구한다.
+            var total = 0;
+
+            for (var i=1; i<=num; i++) {
+                total += i; // total = total + i;
+            }
+
+            return total;
+        }
+
+        document.write('<p>1부터 10까지의 총합은 '+getTotal(10)+"이다.</p>");
+        document.write('<p>1부터 100까지의 총합은 '+getTotal(100)+"이다.</p>");
+        document.write('<p>1부터 55까지의 총합은 '+getTotal(55)+"이다.</p>");
+        document.write('<p>1부터 33까지의 총합은 '+getTotal(33)+"이다.</p>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

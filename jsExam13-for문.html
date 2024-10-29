@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <script>
+        document.write('<table border="2">');
+        document.write('<tr>');
+        for (var i=2; i<10; i++) {
+            document.write('<td><strong>'+i+'단</strong></td>');
+        }
+        document.write('</tr>');
+        
+        for (var j=1; j<10; j++) { // 1 ~ 9까지 반복: 행이 바뀌면 1씩 증가 > '행'을 담당
+            document.write('<tr>');
+            for (var i=2; i<10; i++) { // 2 ~ 9까지 반복: 같은 행일 때 1씩 증가 > '열'을 담당
+                document.write('<td>'+i+' x '+j+' = '+(i * j)+'</td>');
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        /*
+        screen : 디스플레이를 가지고 있는 디바이스를 지정(TV, 모니터, 태블릿, 스마트폰 등)
+        min-width : 속성값 보다 큰 영역을 지정(속성값 이상)
+        max-width : 속성값 보다 작은 영역을 지정(속성값 이하)
+        */
+        @media screen and (min-width:1440px) {
+            /* 웹 브라우저 너비값이 1440px 이상인 영역 : 4K, FHD, LapTop(Target Device) */
+            body {background:#fc0;}
+            section {
+                display:flex; justify-content:space-between;
+                width:1400px; margin:0 auto; padding:50px; background:#eee;
+            }
+            h3 {
+                width:450px; padding-right:50px;
+                font-size:42px; color:#06f; text-transform:capitalize;
+            }
+        }
+        @media screen and (min-width:1000px) and (max-width:1439px) {
+            /* 웹 브라우저 너비값이 1000px 이상 1439px 이하인 영역 : notebook 1360px, iPad Pro(1024) */
+            body {background:#06f;}
+            section {
+                display:flex; justify-content:space-between;
+                width:950px; margin:0 auto; padding:30px; background:#eee;
+            }
+            h3 {
+                width:450px; padding-right:30px;
+                font-size:32px; color:#06f; text-transform:capitalize;
+            }
+        }
+        @media screen and (min-width:760px) and (max-width:999px) {
+            /* 웹 브라우저 너비값이 760px 이상 999px 이하인 영역 : iPad Mini(768), iPad Air(820px) */
+            body {background:darkgreen;}
+            section {padding:20px; background:#eee;}
+            h3 {
+                padding-bottom:10px;
+                font-size:32px; color:#06f; text-align:center; text-transform:capitalize;
+            }
+        }
+        @media screen and (max-width:759px) {
+            /* 웹 브라우저 너비값이 759px 이하인 영역 : smart phone(375px ~ ) */
+            body {background:darkred;}
+            section {padding:15px; background:#eee;}
+            h3 {
+                padding-bottom:10px;
+                font-size:28px; color:#06f; text-align:center; text-transform:capitalize;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h3>media query</h3>
+        <p>
+            미디어 쿼리(Media Query)는 반응형 웹(Responsive web)을 구현할 때 디바이스 웹 브라우저 해상도의 영역(미디어 쿼리 중단점, Media Query Brake Point)을 지정하여 각각 다른 스타일 시트를 적용한다.
+        </p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+웹브라우저는 인터프리터(해석기)로 코드를 해석하고 실행한다.
+인터프리터는 Just-In-Time 형식(코드를 읽고 해석하고 바로 실행)으로 해석하고 실행한다.
+<html lang="ko">
+★ <html lang="ko"> : 시작 태그
+    < : 꺾쇠
+    html : 요소명
+    lang : 속성(attribute)
+    "ko" : 속성값(attribute value)
+★ </html> : 끝태그
+★ <html lang="ko"></html> : 요소(박스)
+※ 요소는 부모요소와 자식요소로 구성된다.
+※ 요소는 웹콘텐츠를 저장하는 용도로 사용된다.
+    <h1>웹콘텐츠를 저장하는 용도로 사용</h1>
+-->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        .box {
+            display: flex; align-items: center; justify-content: space-around;
+            background:skyblue;
+            border-radius: 30px;
+            box-shadow: 5px 5px 15px #333;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('#btn').click(function(){
+                $('#hong').css('background', '#fc0');
+            });
+
+            $('#name').change(function(){
+                console.log($('#name').val());
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="hong" class="box">
+        <h2>천재 목록</h2>
+        <p>홍길동, 세종대왕</p>
+    </div>
+    <button id="btn">CLICK</button>
+
+    <input type="text" id="name">
+</body>
+</html>
+

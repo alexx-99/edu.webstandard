@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변환</title>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <style>
+        .timing-box {
+            position:relative;
+            width:1000px; height:1000px; margin:50px auto;
+            border-left:5px solid #06f; border-right:5px solid #06f;
+        }
+        .test {
+            position:absolute; left:0;
+            width:150px; height:150px; border-radius:50%;
+            text-align:center; line-height:150px;
+        }
+        .linear {top:0; background:lightblue; transition:all 0.8s linear;}
+        .ease {top:200px; background:lightcoral; transition:all 0.8s ease;}
+        .ease-in {top:400px; background:lightgoldenrodyellow; transition:all 0.8s ease-in;}
+        .ease-out {top:600px; background:lightgreen; transition:all 0.8s ease-out;}
+        .ease-in-out {top:800px; background:lightgray; transition:all 0.8s ease-in-out;}
+
+        .timing-box:hover .test {left:850px; transform:rotate(1080deg);}
+    </style>
+    <div class="timing-box">
+        <div class="test linear">LINEAR</div>
+        <div class="test ease">EASE</div>
+        <div class="test ease-in">EASE-IN</div>
+        <div class="test ease-out">EASE-OUT</div>
+        <div class="test ease-in-out">EASE-IN-OUT</div>
+    </div>
+</body>
+</html>

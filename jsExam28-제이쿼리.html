@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 - 이벤트 효과 메소드</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('#btnHide').click(function(){
+                $('p').hide();
+            });
+            $('#btnShow').click(function(){
+                $('p').show();
+            });
+            $('#btnToggle').click(function(){
+                $('p').toggle();
+            });
+            $('#btnFade').click(function(){
+                $('p').fadeToggle();
+            });
+            $('#btnSlide').click(function(){
+                $('p').slideToggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="flex-center">
+        <button id="btnHide" class="btn btn-info">hide</button>
+        <button id="btnShow" class="btn btn-info">show</button>
+        <button id="btnToggle" class="btn btn-info">toggle</button>
+        <button id="btnFade" class="btn btn-info">fadeToggle</button>
+        <button id="btnSlide" class="btn btn-info">slideToggle</button>
+    </div>
+    <p>
+        이벤트 효과 메소드<br>
+        show() : 선택한 요소를 보여준다.<br>
+        hide() : 선택한 요소를 숨긴다.<br>
+        toggle() : 선택한 요소를 보여주고 숨기는 것을 반복한다.<br>
+        fadeIn() : 선택한 요소를 서서히 보여준다.<br>
+        fadeOut() : 선택한 요소를 서서히 숨긴다.<br>
+        fadeToggle() : 선택한 요소를 서서히 보여주고 숨기는 것을 반복한다.<br>
+        slideDown() : 선택한 요소를 아래로 서서히 보여준다.<br>
+        slideUp() : 선택한 요소를 위로 서서히 숨긴다.<br>
+        slideToggle() : 선택한 요소를 위/아래로 서서히 보여주고 숨기는 것을 반복한다.
+    </p>
+</body>
+</html>

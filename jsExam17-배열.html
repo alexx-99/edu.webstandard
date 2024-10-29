@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <script>
+        var city = ['서울', '부산', '인천']; // city 배열의 원소 값으로 리터럴(상수)를 저장했다.
+        // 배열의 원소를 저장할 때 자동으로 인덱스 번호(index)가 0 부터 순차적으로 자동 지정된다.
+        // 배열의 원소값을 얻을 때 인덱스 번호를 이용하여 for 반복문을 사용한다.
+        // city.length는 city 배열 원소의 개수이다. 배열명.length는 배열의 개수를 얻는다.
+        for (var i=0; i<city.length; i++) {
+            document.write(city[i], '<br>');
+        }
+        // document.write(city[0], '<br>');
+        // document.write(city[1], '<br>');
+        // document.write(city[2], '<br>');
+
+        var math = []; // math 배열 선언
+        math[0] = 95;
+        math[1] = 88;
+        math[2] = 72;
+        math[3] = 68;
+        math[4] = 99;
+        math[5] = 82;
+        math[6] = 78;
+        math[7] = 85;
+
+        function getTotal() { // 수학 점수의 총점을 구하는 함수
+            var total=0; // 수학 점수의 총합을 저장할 변수 선언, 로컬 변수는 초기화한다.
+
+            for (var i=0; i<math.length; i++) {
+                if (math[i] === undefined) continue;
+                // math 배열 원소에 값이 없으면 연산하지 않겠다.(유효성 검증)
+                total += math[i];
+            }
+            document.write('<p>학생 수는 '+math.length+'명이다.</p>');
+            document.write('<p>수학 점수의 총합은 '+total+'점이다.</p>');
+            getAvg(total);
+        }
+
+        function getAvg(total) {
+            var avg = total / math.length;
+            document.write('<p>수학 점수의 평균은 '+avg+'점이다.</p>');
+        }
+
+        getTotal(); // 함수 호출 : 함수명();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

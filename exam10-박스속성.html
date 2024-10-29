@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스 속성</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        /* width, height, margin, padding, border, border-radius, box-shadow */
+        /* 플렉스 박스(flex box)
+            display:flex; 자식 박스를 좌에서 우로 배치한다.
+            justify-content(h-align,수평정렬):space-between(양끝정렬), center(중앙정렬);
+            align-items(v-align,수직정렬):center(중앙정렬);
+            flex-wrap:wrap; 자식 박스를 행 단위로 배치하는 것을 부모 요소의 100%에 도달했을 때 줄바꿈한다.
+        */
+        .container {padding:50px 0; background:url('imgs/bg.jpg');}
+        ul.wrap {
+            display:flex; justify-content:space-between; align-items:center;
+            width:1200px; margin:0 auto;
+        }
+        ul.wrap > li {
+            width:31.5%; padding:25px;
+            background:#f2f2f2; border-bottom:4px solid #015515; border-radius:15px 15px 0 0;
+            box-shadow:0 0 0 0 rgba(0,0,0,0.8) inset, 0 0 0 0 rgba(115, 120, 10, 0.8) inset;
+            transition:all 0.4s ease-in;
+        }
+        ul.wrap > li:hover {
+            /* box-shadow:10px 10px 20px #000 inset; */
+            box-shadow:0 0 0 20px rgba(0,0,0,0.1) inset, 0 0 0 10px rgba(115, 120, 10, 0.3) inset;
+        }
+        .wrap p {padding:15px 0;}
+        .wrap img {width:100%;}
+        .wrap a {margin-top:25px;}
+        .wrap a:hover {color:#06f;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="wrap">
+            <li>
+                <h3>Körber Supply Chain improves efficiency, scale, reliability using OCI</h3>
+                <p>By moving its warehouse management applications from on-premises to OCI, it cut costs and improved performance by 40%.</p>
+                <img src="https://www.oracle.com/node/oce/storyhub/prod/api/v1.1/assets/CONT52702D81C09145CFAD95F86AE8DF546B/native/rh09-K%C3%B6rber.jpg" alt="Körber">
+                <a href="">Read Körber's story</a>
+            </li>
+            <li>
+                <h3>Helzberg Diamonds optimizes retail planning with AI</h3>
+                <p>By moving its warehouse management applications from on-premises to OCI, it cut costs and improved performance by 40%.</p>
+                <img src="https://www.oracle.com/node/oce/storyhub/prod/api/v1.1/assets/CONTDF93CC3713BE45BBBB8C03FBCB8E947E/native/rh09-Helzberg.jpg" alt="Helzberg Diamonds">
+                <a href="">Read Helzberg’s story</a>
+            </li>
+            <li>
+                <h3>OUTRIGGER Hospitality Group accelerates resort openings with OPERA Cloud</h3>
+                <p>OUTRIGGER’s move from on-premises property management to Oracle OPERA Cloud also helps the company access AI-powered innovation.</p>
+                <img src="https://www.oracle.com/node/oce/storyhub/prod/api/v1.1/assets/CONTD1711035AB3E4747BFE865CB2625C1E2/native/rh09-OUTRIGGER.jpg" alt="OUTRIGGER Hospitality Group">
+                <a href="">Read the OUTRIGGER story</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

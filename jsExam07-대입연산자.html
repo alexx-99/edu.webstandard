@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대입 연산자</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <script>
+        var num1 = 10;
+        var num2 =3;
+        console.log('num1의 값 : '+num1);
+        console.log('num2의 값 : '+num2);
+
+        num1 = num2;
+        console.log('num1의 값 : '+num1);
+        console.log('num2의 값 : '+num2);
+
+        num1 += num2; // 누적 : 3 + 3 = 6
+        console.log('num1의 값 : '+num1); // 6
+        console.log('num2의 값 : '+num2); // 3
+
+        num1 += num2; // 누적 : 6 + 3 = 9
+        console.log('num1의 값 : '+num1); // 9
+        console.log('num2의 값 : '+num2); // 3
+
+        num1 -= 2; // 누적 : 9 - 2 = 7
+        console.log('num1의 값 : '+num1); // 7
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

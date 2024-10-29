@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼항 연산자</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <script>
+        var min = 10;
+        var max = 20;
+        var result = null;
+
+        result = min > max ? 'JavaScript' : 'jQuery';
+        document.write(result, '<br>');
+
+        function confirm() {
+            var name = document.getElementById('name').value;
+            var age = document.getElementById('age').value;
+            result = age >= 18 ? '성인입니다.' : '성인이 아닙니다.';
+            document.write(name+"님은 "+result);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="name" placeholder="이름입력" id="name">
+    <input type="number" name="age" placeholder="나이입력" id="age">
+    <button type="button" onclick="confirm()">성인인증</button>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <script>
+        dbId = 'admin';
+        dbPwd = '1234';
+
+        function confirm(id, pwd) { // 아이디와 비밀번호로 인증처리한다.
+            // 매개변수에서 데이터를 처리하는데 필요한 필수 데이터를 전달받는다.
+            if (id == dbId) {
+                if (pwd == dbPwd) {
+                    document.write(id+'님 방문을 환영합니다.');
+                } else {
+                    document.write('비밀번호가 존재하지 않습니다.');
+                }
+            } else {
+                document.write('아이디가 존재하지 않습니다.');
+            }
+        }
+
+        function login() {
+            var userId = document.getElementById('id').value;
+            var userPwd = document.getElementById('pwd').value;
+
+            confirm(userId, userPwd);
+        }
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <input type="text" id="id" class="inputform">
+        <input type="password" id="pwd" class="inputform">
+        <button onclick="login()" class="btn btn-info">로그인</button>
+    </div>
+</body>
+</html>

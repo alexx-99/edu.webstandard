@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 메소드</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .container {position:relative; width:800px; height:660px; margin:50px auto; border:3px solid #06f;}
+        img {position:absolute;}
+        img:nth-child(2) {top:220px;}
+        img:nth-child(3) {top:440px;}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('img').click(function(){
+                if ($(this).hasClass('first')) {
+                    $(this).animate({left:500}, 6000);
+                } else if ($(this).hasClass('second')) {
+                    $(this).animate({left:500}, 3000);
+                } else if ($(this).hasClass('third')) {
+                    $(this).animate({left:500}, 1000);
+                }
+            });
+
+            $('#initial').click(function(){
+                $('img').animate({left:0}, 1000);
+            });
+
+            $('#txt').click(function(){$(this).fadeOut();});
+        });
+    </script>
+</head>
+<body>
+    <div class="flex-center">
+        <button id="initial" class="btn btn-info">초기화</button>
+    </div>
+    <div class="container">
+        <img src="imgs/1.jpg" class="first">
+        <img src="imgs/2.jpg" class="second">
+        <img src="imgs/3.jpg" class="third">
+    </div>
+
+    <p id="txt">
+        국정의 중요한 사항에 관한 대통령의 자문에 응하기 위하여 국가원로로 구성되는 국가원로자문회의를 둘 수 있다. 공무원의 신분과 정치적 중립성은 법률이 정하는 바에 의하여 보장된다. 군인은 현역을 면한 후가 아니면 국무위원으로 임명될 수 없다. 제안된 헌법개정안은 대통령이 20일 이상의 기간 이를 공고하여야 한다. 재의의 요구가 있을 때에는 국회는 재의에 붙이고, 재적의원과반수의 출석과 출석의원 3분의 2 이상의 찬성으로 전과 같은 의결을 하면 그 법률안은 법률로서 확정된다.
+    </p>
+</body>
+</html>

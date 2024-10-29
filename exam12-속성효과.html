@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 효과</title>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <style>
+        body {height:15000px;}
+        /* display:none; 은 요소를 제거한다. opacity:0; 은 요소는 존재하나 안보이게 한다. */
+        img {opacity:1; transition:all 0.4s ease-in;}
+        img:hover {opacity:0.3;}
+    </style>
+    <img src="imgs/html5.jpg">
+
+    <style>
+        .back {
+            width:800px; height:300px; margin:50px auto;
+            background:#06f url('imgs/sky.jpg') no-repeat center center;
+            /* 배경이미지경로 반복여부(repeat, no-repeat) 배경이미지위치(좌우(left,center,right) 상하(top,center,bottom)) */
+            background-size:cover; /* 배경이미지를 박스의 크기에 맞춘다. */
+            background-attachment:fixed; /* 배경이미지를 고정시킨다. */
+        }
+        .back p {
+            width:500px; height:100px;
+            font-size:32px; color:#fff; text-align:center; line-height:100px; text-shadow:2px 2px 4px #000;
+            background:rgba(0,0,0,0.3);
+        }
+    </style>
+    <div class="back flex-center">
+        <p>HTML5 웹 프로그래밍</p>
+    </div>
+
+    <style>
+        .result {opacity:0;}
+        .result p {padding-left:20px; color:#06f;}
+        .qus:hover + .result {opacity:1;}
+    </style>
+    <div class="flex-center">
+        <p class="qus">[문제] CSS에서 불투명도를 적용하는 속성은?</p>
+        <div class="result">
+            <p>opacity 속성</p>
+        </div>
+    </div>
+
+    <style>
+        .gradi1, .gradi2 {height:100px; margin-top:50px;}
+        .gradi1 {background:linear-gradient(to bottom, rgb(125, 175, 250), #06f);}
+        .gradi2 {background:linear-gradient(to right, rgb(125, 175, 250), #06f);}
+    </style>
+    <div class="gradi1"></div>
+    <div class="gradi2"></div>
+</body>
+</html>
+<!-- 
+.box {
+    display:block, none, flex; justify-content:center, space-between; align-items:center; flex-wrap:wrap;
+    position:relative, absolute, fixed; left, top, right, bottom
+    width, hegiht, margin, padding
+    font-family, font-size, color, font-weight, text-align, line-height, text-decoration, text-transform, text-shadow
+    background, border, border-radius, box-shadow
+    opacity, z-index
+    transition
+    transform
+    animation
+}
+-->

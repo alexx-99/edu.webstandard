@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <script>
+        //[문제] 당신이 좋아하는 숫자는? 이라는 메시지를 prompt 함수를 이용하여 출력하고 입력폼에 값을 입력받아 좋아하는 숫자가 짝수이면 '당신이 좋아하는 숫자는 짝수이다'를 출력하고 홀수이면 '당신이 좋아하는 숫자는 홀수이다'라고 출력하세요.
+        var num = prompt('당신이 좋아하는 숫자는?', '0');
+        var number = parseInt(num);
+
+        if (number % 2 == 0) { //짝수일 경우에 실행
+            document.write('당신이 좋아하는 숫자는 짝수이다.');
+        } else { //홀수일 경우에 실행
+            document.write('당신이 좋아하는 숫자는 홀수이다.');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

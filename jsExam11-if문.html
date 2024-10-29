@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .wrap {width:350px; margin:100px auto;}
+        input {margin:5px 0;}
+    </style>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <input type="text" name="id" placeholder="아이디 입력" id="id" class="inputform">
+        <input type="password" name="pwd" placeholder="비밀번호 입력" id="pwd" class="inputform">
+        <button onclick="login()" class="btn btn-primary">로그인</button>
+        <button onclick="deleteMember()" class="btn btn-danger">회원탈퇴</button>
+    </div>
+
+    <button onclick="getGrade()" class="btn btn-info">수학점수에 해당하는 학점</button>
+    <button onclick="getData()" class="btn btn-primary">요일얻기</button>
+    <button onclick="getSeason()" class="btn btn-danger">계절얻기</button>
+</body>
+</html>

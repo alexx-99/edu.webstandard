@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변환</title>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <style>
+        .pbox {width:200px; height:200px; margin:50px; border:5px solid rgba(255,0,0,0.7);}
+        .cbox {
+            width:100%; height:100%; background:rgba(0,50,255,0.7);
+            transition:all 0.4s ease-in;
+            transform-origin:100% 0; /* ★ 박스의 기준점을 변경한다. */
+        }
+        /* .pbox:hover .cbox {transform:translate(100px, 100px);} */
+        /* .pbox:hover .cbox {transform:translateX(150px);} */
+        /* .pbox:hover .cbox {transform:translateY(150px);} */
+        .pbox:hover .cbox {transform:rotate(-45deg);}
+        /* .pbox:hover .cbox {transform:translateX(300px) rotate(720deg) scale(3); opacity:0;} */
+    </style>
+    <div class="pbox">
+        <div class="cbox"></div>
+    </div>
+
+    <style>
+        ul li {width:200px; height:200px; margin:50px 25px; border:10px solid rgba(0,255,0,0.7);}
+        li div {
+            width:100%; height:100%; background:rgba(0,50,255,0.7);
+            transition:all 0.4s ease-in;
+        }
+
+        li:first-child:hover div {transform:translateX(-100px);}
+        li:nth-child(2):hover div {transform:translateY(-100px);}
+        li:last-child:hover div {transform:rotate(-125deg);}
+    </style>
+    <ul class="flex-center">
+        <li><div></div></li>
+        <li><div></div></li>
+        <li><div></div></li>
+    </ul>
+
+    <style>
+        .trans li {
+            /* perspective:700px; 원근감 설정:700~900px */
+            width:300px; height:300px;
+            background:rgba(80, 110, 210,0.6); border:10px solid #06f;
+            transition:all 0.4s ease-in;
+        }
+        .trans li div {font-size:54px; text-align:center; line-height:300px;}
+        .trans li:first-child:hover div {transform:perspective(500px) rotate3d(1,0,0,-75deg);}
+        .trans li:nth-child(2):hover div {
+            transform:perspective(500px) rotate3d(0,1,0,180deg);
+            backface-visibility:hidden; /* 박스 뒷면을 안보이게 설정 */
+        }
+        .trans li:last-child:hover div {transform:perspective(500px) translateZ(-500px);}
+    </style>
+    <ul class="flex-center trans">
+        <li><div>BOX</div></li>
+        <li><div>BOX</div></li>
+        <li><div>BOX</div></li>
+    </ul>
+
+    <style>
+        .timing-box {
+            position:relative;
+            width:1000px; height:1000px; margin:50px auto;
+            border-left:5px solid #06f; border-right:5px solid #06f;
+        }
+        .test {
+            position:absolute; left:0;
+            width:150px; height:150px; border-radius:50%;
+            text-align:center; line-height:150px;
+        }
+        .linear {top:0; background:lightblue; transition:all 0.8s linear;}
+        .ease {top:200px; background:lightcoral; transition:all 0.8s ease;}
+        .ease-in {top:400px; background:lightgoldenrodyellow; transition:all 0.8s ease-in;}
+        .ease-out {top:600px; background:lightgreen; transition:all 0.8s ease-out;}
+        .ease-in-out {top:800px; background:lightgray; transition:all 0.8s ease-in-out;}
+
+        .timing-box:hover .test {left:850px; transform:rotate(1080deg);}
+    </style>
+    <div class="timing-box">
+        <div class="test linear">LINEAR</div>
+        <div class="test ease">EASE</div>
+        <div class="test ease-in">EASE-IN</div>
+        <div class="test ease-out">EASE-OUT</div>
+        <div class="test ease-in-out">EASE-IN-OUT</div>
+    </div>
+</body>
+</html>

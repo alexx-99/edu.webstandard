@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제</title>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <style>
+        .green, .rotate {
+            width:200px; height:200px; margin:30px auto; background:darkgreen;
+            transition:all 0.4s ease-in;
+        }
+        .green:hover {transform:scale(2); background:lightgreen;}
+        .rotate {color:#fff; text-align:center; line-height:200px;}
+        .rotate:hover {transform:translate(250px, 0) rotate(45deg);}
+    </style>
+    <div class="green"></div>
+    <div class="rotate">transform2D</div>
+
+    <style>
+        .wrap {
+            position:relative;
+            width:300px; height:300px; margin:50px auto; border-radius:50%; overflow:hidden;
+            animation:aniRotate 0.8s ease-in 1s infinite;
+        }
+        .wrap div {
+            position:absolute;
+            width:150px; height:150px;
+        }
+        .one {left:0; top:0; background:darkgreen;}
+        .two {right:0; top:0; background:darkred;}
+        .three {right:0; bottom:0; background:darkblue;}
+        .four {left:0; bottom:0; background:lightgreen;}
+
+        @keyframes aniRotate {
+            0% {transform:rotate(0deg);}
+            100% {transform:rotate(90deg);}
+        }
+    </style>
+    <div class="wrap">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+    </div>
+</body>
+</html>

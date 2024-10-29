@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .wrap {width:300px; margin:100px auto;}
+    </style>
+    <script>
+        function loginCheck() {
+            var id = document.getElementById('userid').value;
+            var pwd = document.getElementById('pwd').value;
+
+            if (id == 'std01' && pwd == '1111' || id == 'std02' && pwd == '2222' || id == 'std03' && pwd == '3333') {
+                document.write('로그인 되었습니다.');
+            } else {
+                document.write('로그인에 실패했습니다.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <input type="text" name="id" placeholder="아이디 입력" autofocus id="userid" class="inputform">
+        <input type="password" name="pwd" placeholder="비밀번호 입력" id="pwd" class="inputform">
+        <button onclick="loginCheck()" class="btn btn-primary">로그인</button>
+    </div>
+</body>
+</html>

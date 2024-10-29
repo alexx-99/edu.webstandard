@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 태그</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        /* font-family: "Noto Sans KR", sans-serif; */
+
+        body {
+            font-family: "Noto Sans KR", sans-serif;
+        }
+
+        .box {
+            height:350px; margin-top:1500px;
+            background:#fc0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>FULLSTACK</h1><!-- 로고가 텍스트인 경우 사용한다. -->
+            <!-- 메뉴를 저장할 때 <ul> 요소(부모)와 <li> 요소(자식)를 사용한다. -->
+            <ul>
+                <li><a href="exam01.html">exam01</a></li>
+                <li><a href="exam02-html문서의구조.html">exam02</a></li>
+                <li><a href="exam03-시맨틱태그.html">exam03</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <article>
+            <!-- 텍스트 저장 : 제목(h1 ~ h6), 본문(p) -->
+            <h3>김치 플러스 4도어</h3>
+            <p>BESPOKE의 가장 큰 매력은 조합, 컬러, 재질까지 마음대로 고를 수 있다</p>
+            <!-- 버튼 생성 : button 태그와 a 태그(하이퍼 링크)를 사용 -->
+            <!-- 하이퍼 링크에는 외부 링크(페이지 전환, 웹사이트 이동)와 내부 링크(페이지에서 특정 위치로 이동)가 있다. -->
+            <a href="" title="상세보기" target="_blank">상세보기 <i class="bi bi-eye-fill"></i></a>
+        </article>
+
+        <a href="tel:010-1111-2222">010-1111-2222</a>
+        <!-- 모바일 디바이스(스마트폰, 태블릿)에서 전화앱을 실행 -->
+        <a href="#orange">내부링크</a>
+        <div id="orange" class="box">
+            <table>
+                <thead>
+                    <tr>
+                        <th>이름</th>
+                        <th>점수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>홍민성</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>최민수</td>
+                        <td>80</td>
+                    </tr>
+                    <tr>
+                        <td>심은경</td>
+                        <td>70</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer></footer>
+</body>
+</html>

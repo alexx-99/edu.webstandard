@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #wrap li {margin:10px 0; border:3px solid #06f;}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('#wrap li:eq(0)').after('<p>after</p>');
+            // 선택한 요소 뒤에 DOM을 추가한다.
+            $('#wrap li:eq(0)').before('<p>before</p>');
+            // 선택한 요소 앞에 DOM을 추가한다.
+            $('<li>appendTo</li>').appendTo('#wrap');
+            // A.appendTo('B') : 선택한 B 요소의 끝태그 앞에 A를 추가한다.
+            $('#wrap').append('<li>append</li>');
+            // A.append('B') : 선택한 A 요소의 끝태그 앞에 B를 추가한다.
+
+
+            $('<img>').attr('src', 'https://via.placeholder.com/450x250').appendTo('body');
+            // $('태그')는 문서 객체를 생성한다.
+            // attr('속성명')는 속성명에 해당하는 속성값을 얻는다. attr('속성명', '속성값')는 요소에 속성명과 속성값을 추가한다.
+        });
+    </script>
+</head>
+<body>
+    <ul id="wrap">
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+    </ul>
+</body>
+</html>

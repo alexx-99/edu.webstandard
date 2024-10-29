@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        var date = new Date();
+        var hour = date.getHours();
+
+        var car = { // 서버단으로 데이터를 전달, 데이터를 처리
+            // 객체의 멤버 : 속성(변수)과 기능(메소드)이다.
+            name: '소나타',
+            color: '흰색',
+            speed: 50,
+            door: 4,
+            start: function() {
+                return this.speed + 10; // 메소드를 호출한 곳으로 값을 반환한다.
+            },
+            speedUp: function() {
+                return this.speed + 20;
+            },
+            speedDown: function() {
+                return this.speed - 20;
+            }
+        };
+
+        function Car(name, color, speed) { // car 객체의 생성자 : 속성(객체의 변수)에 값을 초기화한다.
+            this.name = name; // this 는 car 객체를 가리킨다. this.name 은 car 객체의 name 속성을 말한다. name은 로컬변수 name이다.
+            this.color = color;
+            this.speed = speed;
+        }
+
+        var inseok = new Car('그랜저', '검정', 250);
+
+        document.write(car.name, '<br>');
+        document.write(car.start(), '<br>');
+        document.write(inseok.name, '<br>');
+        document.write(inseok.speed, '<br>');
+
+        // $('선택자')는 선택자에 해당하는 요소를 선택한다.
+        // html 문서의 코드를 모두 해석했으면 익명함수의 {} 내부에 있는 명령문을 수행하세요.
+        // $(document).ready(function(){
+        $(function(){
+            document.getElementById('door').innerHTML = car.door;
+            var value = car.speedUp();
+            document.getElementById('speed').innerHTML = '현재 속도 : ' + value + 'km/h';
+            value = car.speedDown();
+            document.getElementById('speed').innerHTML = '현재 속도 : ' + value + 'km/h';
+        });
+    </script>
+</head>
+<body>
+    <div id="door"></div>
+    <div id="speed"></div>
+</body>
+</html>

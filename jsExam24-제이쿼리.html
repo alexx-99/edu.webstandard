@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('img').css('width',200);
+
+            setInterval(function(){$('img').first().appendTo('.wrap');}, 2000);
+            // setInterval(익명함수, 시간간격)는 시간간격마다 익명함수를 실행한다.
+            // 밀리초는 1000이 1초이다.
+
+            setInterval(function(){
+                var date = new Date();
+                var hour = date.getHours();
+                var min = date.getMinutes();
+                var sec = date.getSeconds();
+                $('#hour').text(hour);
+                $('#min').text(min);
+                $('#sec').text(sec);
+            }, 1000);
+        });
+    </script>
+</head>
+<body>
+    <style>
+        .date {width:500px; margin:100px auto; text-align:center;}
+        .date span {padding:0 10px; font-size:54px; color:#06f; font-weight:600;}
+        .wrap {display:flex; width:1000px; height:200px; margin:100px auto; overflow:hidden;}
+        .wrap img {display:block;}
+    </style>
+    <div class="date">
+        <span id="hour"></span>
+        <span>:</span>
+        <span id="min"></span>
+        <span>:</span>
+        <span id="sec"></span>
+    </div>
+    
+    <div class="wrap">
+        <img src="imgs/1.jpg">
+        <img src="imgs/2.jpg">
+        <img src="imgs/3.jpg">
+        <img src="imgs/4.jpg">
+        <img src="imgs/5.jpg">
+        <img src="imgs/6.jpg">
+        <img src="imgs/7.jpg">
+        <img src="imgs/8.jpg">
+        <img src="imgs/9.jpg">
+        <img src="imgs/10.jpg">
+    </div>
+    <div class="flex-center">
+        <button onclick="deleteElement()" class="btn btn-danger">무한 루프 삭제</button>
+    </div>
+    <script>
+        function deleteElement() {
+            $('.wrap').remove();
+        }
+    </script>
+</body>
+</html>

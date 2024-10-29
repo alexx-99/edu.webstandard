@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력양식태그</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/exam06.css">
+</head>
+<body>
+    <form action="" method="" autocomplete="off">
+        <ul id="member">
+            <li><input type="text" name="id" placeholder="아이디입력" required autofocus class="inputform"></li>
+            <li><input type="password" name="pwd" placeholder="비밀번호입력" class="inputform"></li>
+            <li><input type="text" name="name" placeholder="이름입력" class="inputform"></li>
+            <li><input type="text" name="major" placeholder="전공입력" class="inputform"></li>
+            <li><label>자기소개 : </label><textarea name="profile" class="inputform"></textarea></li>
+            <li>
+                <label>성별 : </label>&nbsp;
+                <input type="radio" name="gender" value="남자" checked>&nbsp;남자
+                &nbsp;&nbsp;
+                <input type="radio" name="gender" value="여자">&nbsp;여자
+            </li>
+            <li>
+                <label>취미 : </label>&nbsp;
+                <input type="checkbox" name="hobby" value="여행" checked>&nbsp;여행
+                &nbsp;&nbsp;
+                <input type="checkbox" name="hobby" value="영화">&nbsp;영화
+                &nbsp;&nbsp;
+                <input type="checkbox" name="hobby" value="공부">&nbsp;공부
+            </li>
+            <li><label>생일 : </label><input type="date" name="birth" class="inputform"></li>
+            <li><input type="number" name="age" placeholder="나이입력" class="inputform"></li>
+            <li><input type="range" name="kor" min="0" max="100" value="25"></li>
+            <li><input type="email" name="email" placeholder="이메일입력" class="inputform"></li>
+            <li><input type="url" name="url" placeholder="웹주소입력" class="inputform"></li>
+            <li><input type="tel" name="tel" placeholder="전화번호입력" class="inputform"></li>
+            <li><input type="search" name="keyword" placeholder="검색어입력" class="inputform"></li>
+            <li><progress min="0" max="10" value="8"></progress></li>
+            <li>
+                <button type="submit" class="btn btn-primary">전송</button>
+                <button type="reset" class="btn btn-info">다시쓰기</button>
+            </li>
+        </ul>
+    </form>
+</body>
+</html>

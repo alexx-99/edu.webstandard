@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내비게이션 드로어</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body {
+            height:100vh; background:url('imgs/fox.jpg') no-repeat center center;
+            background-size:cover;
+        }
+        .ani-bg {position:absolute; left:0; width:0; height:2px;}
+        .ani-bg-1 {top:0; background:rgba(255,255,255,0.2);}
+        .ani-bg-2 {top:25%; background:rgba(255,255,255,0.4);}
+        .ani-bg-3 {top:50%; background:rgba(255,255,255,0.6);}
+        .ani-bg-4 {top:75%; background:rgba(255,255,255,0.8);}
+
+
+        .nd, .trigger {position:absolute;}
+        .nd {top:0; height:100vh;}
+        .nd-1 {
+            left:-100%; width:100%; background:rgba(0,25,0,0.3);
+            transition:all 0.4s ease-in;
+        }
+        .nd-2 {
+            left:-80%; width:80%; background:rgba(0,25,0,0.5);
+            transition:all 0.4s ease-in 0.3s;
+        }
+        .nd-3 {
+            left:-60%; width:60%; background:rgba(0,25,0,0.7);
+            transition:all 0.4s ease-in 0.5s;
+        }
+        .nd-4 {
+            left:-40%; width:40%; background:rgba(0,25,0,0.9);
+            transition:all 0.4s ease-in 0.7s;
+        }
+        .nd-1.active, .nd-2.active, .nd-3.active, .nd-4.active {left:0;}
+
+        .trigger {left:50px; top:50px; width:40px; height:40px; font-size:40px; line-height:0;}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.ani-bg').animate({width:'100%'}, 2500).animate({height:'25%'}, 1000);
+
+            $('.trigger').click(function(){
+                $('.nd-1').toggleClass('active');
+                $('.nd-2').toggleClass('active');
+                $('.nd-3').toggleClass('active');
+                $('.nd-4').toggleClass('active');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="ani-bg ani-bg-1"></div>
+    <div class="ani-bg ani-bg-2"></div>
+    <div class="ani-bg ani-bg-3"></div>
+    <div class="ani-bg ani-bg-4"></div>
+
+    <div class="nd nd-1"></div>
+    <div class="nd nd-2"></div>
+    <div class="nd nd-3"></div>
+    <div class="nd nd-4">
+        <!-- 메뉴 -->
+    </div>
+
+    <div class="trigger"><i class="bi bi-list"></i></div>
+</body>
+</html>

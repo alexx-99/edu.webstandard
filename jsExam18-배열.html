@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <script>
+        var arr = [10,20,30,40,'50'];
+
+        function arrTotal() {
+            var total = 0;
+
+            for (var i=0; i<arr.length; i++) {
+                if (typeof arr[i] === 'string') continue; // 자료형이 문자형인것은 제외한다.
+                total += arr[i];
+                // parseInt(arr[i]) : parseInt()는 문자를 숫자형으로 변환하는 함수
+            }
+
+            return total; // total 변수에 저장된 값을 함수를 호출한 곳으로 반환한다.
+        }
+
+        var result = arrTotal();
+        document.write('총합은 '+result+'이다.');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

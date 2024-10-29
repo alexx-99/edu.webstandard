@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"> <!-- 문서의 문자 인코딩을 설정한다. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 웹브라우저의 너비값(픽셀)과 디바이스의 너비값(픽셀)이 다르므로 동일하게 설정한다. 반응형 웹을 구현하는데 반드시 필요한 설정이다. -->
+    <title>HTML 문서의 구조</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <!--
+    스타일시트(Layout + Style) 적용방법
+    ① 인라인스타일시트 적용 : 시작 태그에 style 속성을 사용하여 적용(우선순위가 가장 높음)
+    ② 내부스타일시트 적용 : style 태그에 내부에 요소를 선택하여 스타일을 적용(우선순위가 두번째로 높음)
+    ③ 외부스타일시트 적용(권장:유지보수) : 외부에 있는 스타일시트 파일(***.css)을 html 문서에 포함시켜서 적용
+
+    JavaScript(Functionally) 적용방법
+    ① 내부 스크립트 적용 : script 태그 내부에서 코드를 작성하여 적용
+    ② 외부 스크립트 적용 : 외부에 script 파일(***.js)을 html 문서에 포함시켜서 적용
+    -->
+    <link rel="stylesheet" href="css/exam02.css">
+    <!-- link 태그는 외부에 있는 스타일시트 파일을 html 문서에 포함시킨다. 필수 속성으로 rel 속성과 href 속성이 있다. -->
+     <!-- 경로는 '★절대경로(경로의 시작이 루트 디렉토리(/)이다.)'와 '★상대경로(경로의 시작이 현재 작성하는 파일이다.)'가 있다. 루트 디렉토리는 웹서버는 webapps, 윈도우 운영체제에서는 C 드라이브, D 드라이브가 된다. -->
+    <style></style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body style="background:yellowgreen;">
+    <button onclick="printHello()" class="btn">printHello</button>
+    <a href="javascript:printValue()" class="btn">printValue</a>
+    <h3>HTML5 &nbsp;&nbsp;기본문서</h3>
+    <p>HTML5 기본 태그를<br> 사용하여 작성한 문서이다.</p>
+    <a href="https://www.w3.org" target="_blank" class="btn">w3c</a>
+</body>
+</html>

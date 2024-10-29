@@ -1,0 +1,52 @@
+<!--
+transition은 시작점과 끝점 사이의 중간 단계를 자동으로 생성한다.
+animaiton은 시작점과 중간점, 끝점을 설정해서 중간 단계를 자동으로 생성한다.
+
+1. @keyframes로 애니메이션 지정
+    @keyframes 애니메이션명 {
+        0% {스타일시트 지정}
+        50% {스타일시트 지정}
+        100% {스타일시트 지정}
+    }
+
+2. animation 속성 사용
+    1) 애니메이션명 : @keyframes에서 지정한 애니메이션명
+    2) 진행시간 : 0.8s, 4.5s
+    3) 가속도 : ease, ease-in, ease-out, ease-in-out
+    4) 지연(대기)시간 : 0.8s, 2.5s
+    5) 반복횟수 : infinite(무한반복), 반복횟수를 숫자로 지정
+    6) 방향지정 : normal(좌 > 우), reverse(우 > 좌), alternate(좌 > 우 > 좌)
+
+    animation:애니메이션명 진행시간 가속도 지연시간 반복횟수 방향지정;
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exam15-애니메이션.html</title>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <style>
+        .pbox {
+            position:relative;
+            width:450px; height:100px; margin:100px auto; background:lightsalmon;
+        }
+        .cbox {
+            position:absolute;
+            width:100px; height:100px; background:#fc0; border-radius:50%;
+            animation:ani 1.5s ease-in infinite;
+        }
+
+        @keyframes ani {
+            0% {left:0;}
+            90% {left:450px;}
+            100% {left:350px;}
+        }
+    </style>
+    <div class="pbox">
+        <div class="cbox"></div>
+    </div>
+</body>
+</html>

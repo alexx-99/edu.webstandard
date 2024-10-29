@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 선택자</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        h3 {text-align:center;}
+        .container {width:800px; height:500px; margin:30px auto; background:rgb(200, 235, 245);}
+        .container p {width:200px; margin:10px 0; padding:20px; background:#fc0;}
+        .container:hover p {width:800px;}
+        .container .txt1 {transition:all 2s linear;}
+        .container .txt2 {transition:all 2s ease;}
+        .container .txt3 {transition:all 2s ease-in;}
+        .container .txt4 {transition:all 2s ease-out;}
+        .container .txt5 {transition:all 2s ease-in-out;}
+        .container:hover .txt1 {background:#09f;}
+        .container:hover .txt2 {background:rgb(215, 170, 245);}
+        .container:hover .txt3 {background:rgb(245, 245, 185);}
+        .container:hover .txt4 {background:rgb(245, 200, 210);}
+        .container:hover .txt5 {background:rgb(210, 245, 210);}
+
+
+        #man, #woman {display:none;}
+        .radio {
+            width:60px; height:40px; margin:0 2px;
+            text-align:center; line-height:37px; border:1px solid #06f;
+        }
+        /* #man:checked + label, #woman:checked + label {background:rgb(250, 245, 210); border:1px solid #fc0;} */
+        input[type="radio"]:checked + label {background:#faf5d1; border:1px solid #fc0;}
+
+        .box div {padding:20px; border:3px solid #fc0;}
+        .box > div {border:3px solid #03f;}
+    </style>
+</head>
+<body>
+    <h3>가상 선택자</h3>
+    <div class="container">
+        <p class="txt1">linear</p>
+        <p class="txt2">ease</p>
+        <p class="txt3">★ease-in</p>
+        <p class="txt4">ease-out</p>
+        <p class="txt5">ease-in-out</p>
+    </div>
+
+    <ul>
+        <li class="flex-center">
+            <input id="man" type="radio" name="gender" value="남자" checked>
+            <label for="man" class="radio">남자</label>
+            <input id="woman" type="radio" name="gender" value="여자">
+            <label for="woman" class="radio">여자</label>
+        </li>
+    </ul>
+
+    <div class="box">
+        <div></div>
+        <div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>
