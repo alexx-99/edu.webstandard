@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Scrolling speed - fullPage.js</title>
+	<link rel="stylesheet" href="fullpage/jquery.fullPage.css">
+	<link rel="stylesheet" href="css/examples.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script src="fullpage/scrolloverflow.js"></script>
+	<script src="fullpage/jquery.fullPage.js"></script>
+	<script src="js/examples.js"></script>
+	<script>
+		$(function() {
+			$('#fullpage').fullpage({ // { }은 객체(속성(데이터)과 메소드(기능:데이터처리)를 저장)
+				// [ ] 은 배열
+				// 자바스크립트와 제이쿼리는 자료형이 없고 값이 저장될 때 자료형이 결정된다.
+				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#fc0', '#ccddff'], // 배경 색상 지정
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'], // 내부 링크 지정
+				menu: '#menu', // 메뉴의 부모 요소 지정
+				scrollingSpeed: 1000 // 스크롤 스피드(밀리초)
+			});
+		});
+	</script>
+</head>
+<body>
+	<style>
+		.fp-menu {
+			position:fixed; width:100px; height:100vh; padding-top:300px;
+			text-align:center;
+			background:rgba(10, 10, 100, 0.7); z-index:9;
+		}
+		.fp-menu a {display:block; padding:20px 0; color:#f6f6f6;}
+		.fp-container {
+			position:absolute; left:50%; width:70%; height:60%;
+			background:#fc0;
+			transform:translate(-50%, -50%);
+		}
+	</style>
+	<ul id="menu" class="fp-menu">
+		<li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
+		<li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+		<li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+		<li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>
+		<li data-menuanchor="lastPage"><a href="#lastPage">Last slide</a></li>
+	</ul>
+	
+	<div id="fullpage">
+		<div class="section" id="section0">
+			<div class="fp-container">
+				<h1>fullPage.js</h1>
+				<p>Configure the scrolling speed!</p>
+			</div>
+		</div>
+		
+		<div class="section" id="section1">
+		    <div class="slide">
+				<h1>1</h1>
+			</div>
+		    <div class="slide">
+				<h1>2</h1>
+			</div>
+			<div class="slide">
+				<h1>3</h1>
+			</div>
+		</div>
+		
+		<div class="section" id="section2">
+			
+		</div>
+		
+		<div class="section" id="section3">
+			<div class="slide">
+				<h1>1</h1>
+			</div>
+		    <div class="slide">
+				<h1>2</h1>
+			</div>
+			<div class="slide">
+				<h1>3</h1>
+			</div>
+		</div>
+		
+		<div class="section" id="section4">
+			
+		</div>
+	</div>
+</body>
+</html>

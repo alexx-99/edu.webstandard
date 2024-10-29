@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+
+.ch-grid {
+    display:flex; justify-content:space-between;
+    width:760px; margin:100px auto;
+}
+.ch-grid li {width:220px; height:220px;}
+
+
+.ch-item {
+    position:relative; width:100%; height:100%; border-radius:50%;
+    box-shadow:0 2px 4px rgba(0,0,0,0.3);
+}
+
+.ch-info-wrap {
+	position:absolute; left:20px; top:20px;
+	width:180px; height:180px; border-radius:50%;
+	background:url(../../imgs/circle/bg.jpg);
+	box-shadow:0 0 0 20px rgba(255,255,255,0.3),
+		0 0 10px rgba(115,114,23,0.8);
+	perspective:700px; /* z 축 원근감(회전하는 반경)으로 수치가 낮을 수록 왜곡이 심해진다. */
+	transition:all 0.6s ease-in;
+}
+.ch-info {
+	position:absolute;
+	width:100%; height:100%; border-radius:50%;
+	transform-style:preserve-3d;
+    /* 자식요소에 부모 요소에 적용한 perspective를 전달한다. 부모 요소에 perspective 속성을 사용해도 손자에게는 적용되지 않으므로 손자 요소까지 perspective 속성을 유지시켜주는 속성을 작성해야한다. */
+	transition:all 0.4s ease-in;
+}
+
+.ch-info > div {
+    position:absolute; width:100%; height:100%; border-radius:50%;
+    backface-visibility:hidden; /*박스의 뒷면을 안보이게 설정*/
+}
+.ch-info .ch-info-back {
+    color:#f6f6f6; text-align:center;
+    background:#000;
+    transform:rotate3d(1,0,0,180deg);
+}
+.ch-info-back h3 {
+    height:50%; padding-top:50px;
+    font-size:17px; text-transform:uppercase; letter-spacing:-1px;
+    border-bottom:1px dashed #e8e8e8;
+}
+.ch-info-back p {padding-top:15px; font-size:13px;}
+.ch-info-back a {padding-top:10px; font-size:13px; color:#fc0; text-transform:uppercase;}
+
+
+.ch-bg-1 {background:url('../imgs/10.jpg') no-repeat center center;}
+
+
+/*========== ch-item:hover ==========*/
+.ch-item:hover .ch-info-wrap {
+    box-shadow:0 0 0 2px rgba(255,255,255,0.5),
+        0 0 30px rgba(115,115,25,0.4);
+}
+.ch-item:hover .ch-info {transform:rotate3d(1,0,0,-180deg);}
+
+
+
+
+
+/*========== ch-info2 ==========*/
+.ch-info2 {
+    position:absolute; left:50%; top:50%;
+    width:180px; height:180px; margin:-90px 0 0 -90px;
+    border-radius:50%;
+    box-shadow:0 0 0 20px rgba(255,255,255,0.3),
+		0 0 15px rgba(115,114,23,0.8);
+}
+.ch-info2 > div {position:absolute; width:100%; height:100%; border-radius:50%;}
+.ch-info2 .ch-info-front {transition:all 0.3s ease-in;}
+
+.ch-bg-2 {background:url('../imgs/11.jpg') no-repeat center center;}
+
+.ch-info2 .ch-info-back {
+    color:#f6f6f6; text-align:center;
+    background:#000; opacity:0;
+    transform:scale(2.5);
+    transition:all 0.2s ease-in 0.2s;
+}
+
+.ch-item:hover .ch-info2 > .ch-info-front {transform:scale(0); opacity:0;}
+.ch-item:hover .ch-info2 > .ch-info-back {transform:scale(1); opacity:1;}
+
+
+
+
+
+/*========== ch-info3 ==========*/
+.ch-info3 {
+    position:absolute; left:50%; top:50%;
+    width:180px; height:180px; margin:-90px 0 0 -90px;
+    border-radius:50%;
+    box-shadow:0 0 0 20px rgba(255,255,255,0.3),
+		0 0 15px rgba(75, 75, 5, 0.8);
+}
+
+.ch-info3 > div {position:absolute; width:100%; height:100%; border-radius:50%;}
+.ch-info3 .ch-info-front {transform-origin:50% 100%; transition:all 0.4s ease-in;}
+
+.ch-bg-3 {background:url('../imgs/12.jpg') no-repeat center center;}
+
+.ch-info3 .ch-info-back {color:#f6f6f6; text-align:center; background:rgba(0,50,255,0.7);}
+
+
+.ch-item:hover .ch-info3 > .ch-info-front {transform:rotate3d(1,0,0,-180deg);}

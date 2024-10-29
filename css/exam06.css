@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+#member {width:360px; margin:50px auto;}
+#member li {padding:5px 0;}
+#member li:nth-child(6), #member li:nth-child(7) {display:flex; align-items:center;}
+#member li:last-child {display:flex; justify-content:center; margin-top:30px;}

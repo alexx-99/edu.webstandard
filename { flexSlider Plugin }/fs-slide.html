@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexSlider</title>
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/fs-slide.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script>
+        $(function() {
+            $('.flexslider').flexslider({
+                animation: "slide" // fade
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="flexslider">
+        <ul class="slides">
+            <li>
+                <div class="fs-bg fs-bg-1"></div>
+                <div class="fs-contents">
+                    <h2>adventurer lemon</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </li>
+            <li>
+                <div class="fs-bg fs-bg-2"></div>
+                <div class="fs-contents">
+                    <h2>adventurer caramel</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+            </li>
+            <li>
+                <div class="fs-bg fs-bg-3"></div>
+                <div class="fs-contents">
+                    <h2>adventurer cheesecake</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+            </li>
+            <li>
+                <div class="fs-bg fs-bg-4"></div>
+                <div class="fs-contents">
+                    <h2>adventurer donut</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

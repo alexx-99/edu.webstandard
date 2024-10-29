@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+
+.tabs {
+    position:relative;
+    width:750px; height:440px; margin:100px auto; overflow:hidden;
+}
+
+
+/*========== 탭버튼 ==========*/
+.tabs input, .tabs label {
+    position:absolute; top:0; width:120px; height:40px;
+    cursor:pointer;
+}
+.tabs input {opacity:0;}
+.tabs input#tab-1, .tabs label.tab-label-1 {left:0;}
+.tabs input#tab-2, .tabs label.tab-label-2 {left:120px;}
+.tabs input#tab-3, .tabs label.tab-label-3 {left:240px;}
+.tabs input#tab-4, .tabs label.tab-label-4 {left:360px;}
+.tabs label {
+    color:#f6f6f6; text-align:center; line-height:40px; text-transform:uppercase;
+    background:linear-gradient(to bottom, #50aaa4, #4e8a8a);
+    border-radius:10px 10px 0 0;
+}
+.tabs input:checked + label {color:#333; background:#e2e2e2;}
+
+
+/*========== 탭내용 ===========*/
+.contents {
+    position:absolute; top:40px; width:100%; height:400px; padding:50px;
+    background:#e2e2e2; opacity:0;
+    transition:all 0.4s ease-in;
+}
+.contents h3 {font-size:32px; color:#36f; text-transform:uppercase;}
+.contents p {
+    margin-top:15px; padding-left:15px;
+    border-left:10px solid rgba(175, 245, 100, 0.6);
+}
+.contents .au-bg {
+    display:flex; justify-content:right;
+    height:100px; margin-top:50px;
+    background:url('../imgs/sky.jpg') no-repeat center center;
+    background-size:cover;
+    background-attachment:fixed;
+}
+.au-bg h4 {
+    width:50%; height:100%;
+    font-size:24px;color:#fff; text-align:center; line-height:100px; text-transform:capitalize;
+    background:rgba(0,0,0,0.6);
+}
+.tab-content-1, .tab-content-3 {left:-500px;}
+.tab-content-2, .tab-content-4 {left:500px;}
+
+
+input.tab-radio-1:checked ~ .tab-content-1,
+input.tab-radio-2:checked ~ .tab-content-2,
+input.tab-radio-3:checked ~ .tab-content-3,
+input.tab-radio-4:checked ~ .tab-content-4 {left:0; opacity:1; z-index:9;}
+
+
+
+

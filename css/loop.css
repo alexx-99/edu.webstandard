@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+
+.slider {position:relative; width:100%; height:200px; overflow:hidden;}
+.slider > div {display:flex; position:absolute; height:100px;}
+.slide-track {left:0; top:0; width:calc(250px * 14); animation:loopImage 40s linear infinite;}
+.slide-track2 {
+    left:calc(-250px * 7); top:100px; width:calc(250px * 14);
+    animation:loopImage2 40s linear infinite;
+}
+
+@keyframes loopImage {
+    0% {transform:translateX(0);}
+    100% {transform:translateX(calc(-250px * 7));}
+}
+
+@keyframes loopImage2 {
+    0% {transform:translateX(0);}
+    100% {transform:translateX(calc(250px * 7));}
+}
+

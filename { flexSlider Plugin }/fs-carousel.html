@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexSlider</title>
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/fs-carousel.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script>
+        $(function() {
+            $('.flexslider').flexslider({
+                animation: "slide", // 요소의 움직임 효과
+                animationLoop: true, // 슬라이드 반복 여부(true:무한반복, false:한번반복)
+                itemWidth: 350, // li 요소의 너비값을 지정
+                itemMargin: 20, // li 요소의 바깥쪽 여백을 지정(박스 오른쪽에만 설정)
+                mousewheel: true // 마우스 휠을 스크롤하면 오른쪽에서 왼쪽으로 슬라이드
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="fs-container">
+        <div class="flexslider carousel">
+            <ul class="slides">
+                <li><img src="imgs/1.jpg"></li>
+                <li><img src="imgs/2.jpg"></li>
+                <li><img src="imgs/3.jpg"></li>
+                <li><img src="imgs/4.jpg"></li>
+                <li><img src="imgs/1.jpg"></li>
+                <li><img src="imgs/2.jpg"></li>
+                <li><img src="imgs/3.jpg"></li>
+                <li><img src="imgs/4.jpg"></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="fs-container">
+        <div class="flexslider carousel">
+            <ul class="slides">
+                <li>
+                    <div class="fsc-bg fsc-bg-1"></div>
+                    <h3>adventurer caramel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">more</a>
+                </li>
+                <li>
+                    <div class="fsc-bg fsc-bg-2"></div>
+                    <h3>adventurer caramel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">more</a>
+                </li>
+                <li>
+                    <div class="fsc-bg fsc-bg-3"></div>
+                    <h3>adventurer caramel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">more</a>
+                </li>
+                <li>
+                    <div class="fsc-bg fsc-bg-4"></div>
+                    <h3>adventurer caramel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">more</a>
+                </li>
+                <li>
+                    <div class="fsc-bg fsc-bg-1"></div>
+                    <h3>adventurer caramel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">more</a>
+                </li>
+                <li>
+                    <div class="fsc-bg fsc-bg-2"></div>
+                    <h3>adventurer caramel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">more</a>
+                </li>
+                <li>
+                    <div class="fsc-bg fsc-bg-3"></div>
+                    <h3>adventurer caramel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">more</a>
+                </li>
+                <li>
+                    <div class="fsc-bg fsc-bg-4"></div>
+                    <h3>adventurer caramel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">more</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

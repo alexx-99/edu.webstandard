@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+body {background: #fc0;}
+/*
+박스유형: 블록(block:레이아웃 스타일시트가 잘 적용, 줄바꿈), 인라인-블록(inline-block:레이아웃 스타일시트가 잘 적용, 줄바꿈 X : <img>), 인라인(inline:레이아웃 스타일시트가 적용 X, 줄바꿈 X : <a>, <input>, <button>, <span>)
+*/
+.btn { /* 공통 스타일 시트 : 스타일시트 재사용 */
+    display:block; /*박스유형을 블록형 박스로 변경*/
+    width:120px; height:40px; margin:10px auto;
+    background:lightcyan; border: 0; border-radius:20px;
+}
+a {color:#333; text-align:center; line-height:40px; text-decoration:none;}

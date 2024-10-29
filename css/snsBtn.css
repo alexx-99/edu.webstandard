@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+
+.sns {
+    display:flex; position:absolute; left:50%; top:50%;
+    transform:translate(-50%, -50%);
+}
+.sns li {margin:0 25px;}
+.sns a {
+    position:relative;
+    width:90px; height:90px;
+    background:linear-gradient(to bottom, #eee, #ddd); border-radius:25%;
+    box-shadow:0 5px 15px rgba(0,0,0,0.6),
+        0 3px 10px rgba(255,255,255,0.8) inset;
+    overflow:hidden;
+}
+.sns a i {
+    position:absolute; left:50%; top:50%;
+    font-size:24px; color:#3588db; z-index:2;
+    transform:translate(-50%, -50%);
+    transition:all 0.4s ease-in 0.5s;
+}
+.sns a::before {
+    content:"";
+    position:absolute; left:-110px; top:90%;
+    width:130%; height:130%; z-index:1;
+    transform:rotate(45deg);
+}
+.sns .sky::before {background:#3588db;}
+.sns .green::before {background:#0f9507;}
+.sns .red::before {background:#db356f;}
+
+.sns a:hover i {
+    color:#f6f6f6; transform:translate(-50%, -50%) scale(1.2);
+}
+.sns a:hover::before {
+    left:-15px; top:-10%;
+    animation:action 0.7s ease-in 1;
+}
+
+
+@keyframes action {
+    0% {left:-110px; top:90%;}
+    80% {left:5px; top:-30%;}
+    100% {left:-15px; top:-10%;}
+}

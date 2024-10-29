@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* fonts.google.com에서 웹폰트로 사용할 서체의 CDN을 사용한다. */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+/* font-family: "Noto Sans KR", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+/* font-family: "Vollkorn", serif; */
+
+* {margin:0; padding:0; box-sizing:border-box;}
+/* 모든 요소를 선택하여 박스 외부 여백과 박스 내부 여백을 0으로 초기화하고 박스의 너비값에 박스의 내부 여백과 테두리 값을 포함시킨다. */
+body {
+    font-family: "Noto Sans KR", sans-serif; font-size:16px; color:#333;
+    background:#f6f6f6;
+}
+/* 본문(서체, 글자크기, 글자색상 등)에 적용할 스타일시트를 작성하고 배경색상을 적용한다. */
+h1,h2 {font-family: "Vollkorn", serif; color:#f6f6f6; font-weight:600;}
+h1 {font-size:32px;} /* 로고에 적용하는 스타일시트 */
+h2 {text-transform:uppercase;} /* 배너의 제목에 적용하는 스타일시트 */
+h3,h4,h5,h6 {font-family: "Noto Sans KR", sans-serif; font-weight:600;}
+h3 {font-size:24px;} /* 본문 제목에 적용하는 스타일시트 */
+ul,ol {list-style:none;} /* 블릿 제거, 순번 제거 */
+a {display:block; color:#333; text-decoration:none;}
+/* display 속성으로 박스 유형을 블록형 박스로 변경, 글자색상을 #333으로 변경, 텍스트 언더바 제거 */
+input,textarea,button,label {
+    display:block;
+    font-family: "Noto Sans KR", sans-serif; font-size:16px;
+    outline:0; background:none; border:0;
+}
+/* 입력폼과 텍스트에리어, 버튼 요소의 웹호환성을 위해 테두리와 아웃라인을 0으로 초기화하고 배경색을 제거한다. 박스의 유형을 블록형 박스로 변경한다. */
+input {height:40px;}
+textarea {height:250px;}
+/* input[type="text"] {width:100%;} */
+.flex-center {display:flex; justify-content:center; align-items:center;}
+.flex-between {display:flex; justify-content:space-between; align-items:center;}
+
+
+/*========== input, textarea ==========*/
+.inputform {
+    width:100%; padding:10px;
+    background:#dbecf8; border:1px solid #06f; border-radius:20px;
+    /* solid : 실선, dashed : 점선, dotted : 점 */
+    transition:all 0.4s ease-in;
+}
+.inputform:hover {background:#eee; border:1px solid #ccc;}
+.inputform:focus {background:rgb(245, 235, 210); border:1px solid #fc0;}
+
+
+/*========== button ==========*/
+.btn {
+    margin:5px; padding:10px 20px;
+    color:#f6f6f6; border-radius:23px; cursor:pointer;
+    transition:all 0.4s ease-in;
+}
+.btn-primary {background:#0d6efd;}
+.btn-info {background:#257b9c;}
+.btn-danger {background:#ce3a15;}
+.btn-primary:hover {background:#083980;}
+.btn-info:hover {background:#185267;}
+.btn-danger:hover {background:#9f0e06;}
+
+
+/*========== banner ==========*/
+.bn {height:450px;}
+.bn-primary {background:#083980;}
+.bn h2 {padding-top:250px; font-size:54px; text-align:center;}
